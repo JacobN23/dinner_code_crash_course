@@ -16,7 +16,6 @@ time.sleep(0.5)
 
 #here we set the secret
 word = "dinner"
-second_word = "code"
 
 #creates a variable with an empty value
 guesses = ' '
@@ -32,7 +31,7 @@ while turns > 0:
 	failed = 0
 	
 	# for every character in secret_word
-	for char in (word, second_word):
+	for char in (word):
 		#see if the caracter is in the players guesses
 		if char in guesses:
 			#print then out the characte
@@ -72,20 +71,7 @@ while turns > 0:
 			
 while turns > 0:
 	# make a counter that starts with zero
-	failed = 0
 	
-	# for every character in secret_word
-	for char in (second_word):
-		#see if the caracter is in the players guesses
-		if char in guesses:
-			#print then out the characte
-			print(char)
-		else:
-			# if not found, print a dash
-			print("_")
-			# and increase the failed counter with one
-			failed += 1
-	#if failed is qual to zero
 	# print You Won
 	if failed == 0:
 		print ("You Win")
