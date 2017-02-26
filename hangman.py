@@ -10,20 +10,18 @@ time.sleep(1)
 print ("Start guessing...")
 time.sleep(0.5)
 
-word = "Dinner"
-second_word = "Code"
+word_list = ['input', 'apple']
 guesses = ' ' 
 turns = 10
 
-def worldloop (word):
-	while turns > 0:
-		failed = 0
-		for char in (word) or (second_word):
-			if char in guesses:
-				print(char)
-			else:
-				print("_")
-				failed += 1
+while turns > 0:
+	failed = 0
+	for char in word_list:
+		if char in guesses:
+			print(char)
+		else:
+			print("_")
+			failed += 1
 
 		if failed == 0:
 			print ("You win!")
